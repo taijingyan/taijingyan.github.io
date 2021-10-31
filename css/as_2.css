@@ -5,7 +5,6 @@
     /* background-position: center; */
     /* background-position: 20% 80%; */
     background-repeat: no-repeat;
-    height: 300px;
 }
 
 .img-fluid {
@@ -13,15 +12,12 @@
     background-size: cover;
 }
 
-.container {
-    padding: 15px;
-}
 
 .preface {
     /* font-family: 'Noto Serif TC'; */
     font-size: 20px;
     /* font-weight: bolder; */
-    color: grey
+    color: grey;
 }
 
 .content p {
@@ -31,6 +27,7 @@
 
 h2 {
     margin-top: 70px;
+    margin-right: 15px;
 }
 
 .footer {
@@ -41,12 +38,12 @@ h2 {
 
 h1 {
     font-family: 'Noto Serif TC', serif;
-    font-size: 28px;
 }
 
 .lead {
     font-size: 15px;
-    color: #818181
+    color: #818181;
+    margin-left: 15px;
 }
 
 .bolder {
