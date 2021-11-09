@@ -5,21 +5,23 @@
     /* background-position: center; */
     /* background-position: 20% 80%; */
     background-repeat: no-repeat;
+    height: 200px;
 }
 
 .img-fluid {
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 100%;
-    height: auto;
 }
 
+.container {
+    padding: 15px;
+}
 
 .preface {
     /* font-family: 'Noto Serif TC'; */
     font-size: 20px;
     /* font-weight: bolder; */
-    color: grey;
+    color: grey
 }
 
 .content p {
@@ -28,8 +30,7 @@
 }
 
 h2 {
-    margin-top: 70px;
-    margin-right: 15px;
+    margin-top: 50px;
 }
 
 .footer {
@@ -39,13 +40,15 @@ h2 {
 }
 
 h1 {
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Serif TC', 'serif';
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .lead {
     font-size: 15px;
-    color: #818181;
-    margin-left: 15px;
+    color: #818181
 }
 
 .bolder {
