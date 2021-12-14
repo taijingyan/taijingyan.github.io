@@ -1,0 +1,14 @@
+.earth-img {
+	position: fixed;
+	width: 100%;
+	object-fit: cover;
+	opacity: 1;
+}
+
+/* .transit-effect1 {
+	transition: all 1s;
+} */
+
+#mapmove {
+	color: white;
+}

@@ -28,6 +28,11 @@
     font-size: 18px;
     margin: 15px 0px;
 }
+#mapmove p{
+    font-size: 18px;
+    margin: 300px 50px;
+	color:#ffffff;
+}
 
 h2 {
     margin-top: 50px;
@@ -54,7 +59,6 @@ h1 {
 .legend{
     font-size: 13px;
     color: #818181;
-    margin-bottom: 30px;
 }
 
 .bolder {
@@ -130,81 +134,82 @@ h1 {
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 8px;
-    background: #007bff;
+    background:darkgreen;
     width: 0%;
   }
 
-
-
-
-.sample-setting {
-	animation-name: bounce;
-	animation-duration: 4s; /* or: Xms */
-	animation-iteration-count: 10;
-	animation-direction: alternate; /* or: normal */
-	animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
-	animation-fill-mode: forwards; /* or: backwards, both, none */
-	animation-delay: 2s; /* or: Xms */
-}
-
-/* animation: test 1s 2s 3 alternate backwards */
-
-.load-animate {
-	animation: load 1s 0s 5 normal forwards;
-	visibility: visible;
-}
-
-@keyframes load {
-	0% {
-		font-size: 14px;
-		/* 		transform: translateY(-30%); */
-	}
-	100% {
-		font-size: 18px;
-		/* 		transform: translateY(0%); */
-	}
-}
-
-
-#horizontal {
-	position: absolute;
-	left: 0;
-	height: 100vh;
-	width: 1200vw;
-	background-image: url("https://static01.nyt.com/newsgraphics/2016/07/14/france-attack-scroller/9ec6dcec7e22fffa81a21fb790ba566f2c6aee83/base-big.jpg");
-	/* background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 1) 100%); */
-}
-body {
-	overflow-x: hidden;
+.earth-img {
+	position: fixed;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	width: 100%;
+	object-fit: cover;
+	opacity: 1;
 }
 
 #first {
-	background-image: url("https://p4css.github.io/webScroll/assets/konoha.jpg");
-	min-height: 2400px;
+	background-image: url("https://taijingyan.github.io/as_5/assets/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_jpg%E6%AA%94/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_11.jpg");
+	min-height: 1600px;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: 10%;
 	background-repeat: no-repeat;
-	background-size: cover;
-	filter: grayscale(100%);
+	background-size: 60%;
 }
 #second {
-	background-image: url("https://p4css.github.io/webScroll/assets/konoha.jpg");
-	min-height: 1200px;
+	background-image: url("https://taijingyan.github.io/as_5/assets/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_jpg%E6%AA%94/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_12.jpg");
+	min-height: 800px;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: 10%;
 	background-repeat: no-repeat;
-	background-size: cover;
-	filter: grayscale(50%);
+	background-size: 60%;
 }
 
 #third {
-	background-image: url("https://p4css.github.io/webScroll/assets/konoha.jpg");
-	min-height: 1200px;
+	background-image: url("https://taijingyan.github.io/as_5/assets/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_jpg%E6%AA%94/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_13.jpg");
+	min-height: 800px;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: 10%;
 	background-repeat: no-repeat;
-	background-size: cover;
-	filter: brightness(150%)
+	background-size: 60%;
 }
 
+#fourth {
+	background-image: url("https://taijingyan.github.io/as_5/assets/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_jpg%E6%AA%94/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_14.jpg");
+	min-height: 800px;
+	background-attachment: fixed;
+	background-position: 10%;
+	background-repeat: no-repeat;
+	background-size: 60%;
+}
 
+#fifth {
+	background-image: url("https://taijingyan.github.io/as_5/assets/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_jpg%E6%AA%94/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_15.jpg");
+	min-height: 800px;
+	background-attachment: fixed;
+	background-position: 10%;
+	background-repeat: no-repeat;
+	background-size: 60%;
+}
+
+#sixth {
+	background-image: url("https://taijingyan.github.io/as_5/assets/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_jpg%E6%AA%94/%E6%A3%AE%E6%9E%97%E7%9B%9C%E4%BC%90_16.jpg");
+	min-height: 800px;
+	background-attachment: fixed;
+	background-position: 10%;
+	background-repeat: no-repeat;
+	background-size: 60%;
+}
+
+.card{
+    background-color:white;
+	min-height:800px;
+	background-attachment: fixed;
+	background-position: left;
+	background-repeat: no-repeat;
+    border: none;
+}
+.card p{
+    font-size: 18px;
+    margin: 300px 50px;
+}

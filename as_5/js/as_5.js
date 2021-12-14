@@ -1,16 +1,13 @@
-$(document).ready(function () {
-	$(window).scroll(function () {
-		var max_scroll = $(document).height() - $(window).height();
-		var max_w = $("#horizontal").width() - $(window).width();
-		var current_pos = $(window).scrollTop();
-		console.log(current_pos);
+window.onscroll = function () {
+	myFunction()
+};
 
-		var new_left = (-1 * max_w * current_pos) / max_scroll;
-		$("#horizontal").css({
-			left: new_left
-		});
-	});
-});
+function myFunction() {
+	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	document.getElementById("myBar").style.width = scrolled + "%";
+}
 
 $(window).scroll(function () {
 	var scrolled = $(document).scrollTop();
@@ -43,8 +40,7 @@ $(window).scroll(function () {
 		scrolled > $("#mapmove").offset().top + $("#mapmove").height()
 	) {
 		$("#bg-img").css({
-			transform: "translate(0%, 0%) scale(1)"
+			transform: "translate(-10%, -10%) scale(1)"
 		});
 	}
 });
-
