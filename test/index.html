@@ -7,58 +7,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="css/as_special.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC&amp;display=swap" rel="stylesheet" />
-    <title>test</title>
+
+    <title>13_4_comic_player</title>
+
+    <style>
+        .slideanimate {
+            visibility: hidden;
+        }
+
+        .slide {
+            visibility: visible;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="container">
 
-    <div style="height:100vh;background-color: #333"></div>
-    <div class="row">
-        <div class="col-6 sticky-top" style="height:100vh;overflow:hidden;">
-            <img id="bg-img" src="https://p4css.github.io/webScroll/images/Linpen2019_lg.jpg"
-                style="position:absolute;transform:translateX(0%);transform:translateY(0%);transition:all ease-in 1s;">
-        </div>
-        <div id="mapmove" class="col-6" style="background-color:#ccc;height:400vh">
-            <div data-y="-50%" data-x="-10%" data-scale="2" class="maploc" style="height:100vh;background-color:#AAA">
-                <h1>Section 1</h1>
-            </div>
-            <div data-y="-30%" data-x="-50%" data-scale="8" class="maploc" style="height:100vh;background-color:#BBB">
-                <h1>Section 2</h1>
-            </div>
-            <div data-y="-60%" data-x="-20%" data-scale="1" class="maploc" style="height:200vh;background-color:#CCC">
-                <h1>Section 3</h1>
-            </div>
-        </div>
-    </div>
-    <div style="height:100vh;background-color:gray"></div>
-
-    <div style="height:300vh;">
-        <img src="https://p4css.github.io/webScroll/images/Linpen2006.jpg" class="opa img-fluid earth-img" data-seq=1
-            style="z-index:99;">
-        <img src="https://p4css.github.io/webScroll/images/Linpen2010.jpg" class="opa img-fluid earth-img" data-seq=2
-            style="z-index:98;">
-        <img src="https://p4css.github.io/webScroll/images/Linpen2012.jpg" class="opa img-fluid earth-img" data-seq=3
-            style="z-index:97;">
-        <img src="https://p4css.github.io/webScroll/images/Linpen2015.jpg" class="opa img-fluid earth-img" data-seq=4
-            style="z-index:96;">
-        <img src="https://p4css.github.io/webScroll/images/Linpen2019.jpg" class="opa img-fluid earth-img" data-seq=5
-            style="z-index:95;">
+        <div>Hello</div>
+        <div>Hello</div>
+        <div>Hello</div>
+        <div>Hello</div>
+        <div>Hello</div>
+        <div>Hello</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
+        <div class="hideme">Fade In</div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+
+    <!--        <div style="position:absolute;background-color:rgba(0,0,0,0.5);width:50vw;min-height:500px"></div>-->
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
-    <script src="js/as_special.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function () {
+
+                /* Check the location of each desired element */
+                $('.hideme').each(function (i) {
+
+                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (bottom_of_window > bottom_of_object) {
+
+                        $(this).animate({
+                            'opacity': '1'
+                        }, 500);
+
+                    }
+
+                });
+
+            });
+
+        });
+    </script>
+
+
 </body>
 
 </html>

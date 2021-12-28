@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="as_6.css">
+    <title>13_4_comic_player</title>
+
+</head>
+
+<body>
+
+    <div id="outer" style="width:100vw;">
+        <div class="center">
+            <h1 style="text-align: center;">薛偉（上）如果脫離人世可以成真：薛主簿的人魚冒險</h1>
+            <p style="text-align: center;margin:auto;width:60%">設計：戴淨妍</p>
+        </div>
+        <img src="asset/as6_1_工作區域 1.png" class="img-fluid" style="position:absolute;width:100vw;">
+        <img src="asset/as6_2_工作區域 1.png" class="img-fluid slideanimate" data-pos=10 data-direction="fadeInRight"
+            style="position:absolute;width:100vw;">
+        <img src="asset/as6_3_工作區域 1.png" class="img-fluid slideanimate" data-pos=800 data-direction="fadeInDown"
+            style="position:absolute;width:100vw;">
+        <img src="asset/as6_4_工作區域 1.png" class="img-fluid slideanimate" data-pos=1500 data-direction="fadeInLeft"
+            style="position:absolute;width:100vw;">
+        <img src="asset/as6_5_工作區域 1.png" class="img-fluid slideanimate" data-pos=3000 data-direction="fadeInDown"
+            style="position:absolute;width:100vw;">
+        <img src="asset/as6_6_工作區域 1.png" class="img-fluid slideanimate" data-pos=4500 data-direction="fadeInDown"
+            style="position:absolute;width:100vw;">
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(function () {
+            var winh = $(window).height();
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+                $(".slideanimate").each(function () {
+                    if (scrolled > $(this).data("pos")) {
+                        $(this).addClass("animated slide " + $(this).data("direction"));
+                    }
+                    if (scrolled == 0) {
+                        $(this).removeClass("animated slide " + $(this).data("direction"));
+                    }
+                });
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

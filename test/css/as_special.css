@@ -1,14 +1,16 @@
-.earth-img {
-	position: fixed;
-	width: 100%;
-	object-fit: cover;
-	opacity: 1;
+#container
+{
+    height:2000px;    
 }
 
-/* .transit-effect1 {
-	transition: all 1s;
-} */
+#container DIV
+{ 
+    margin:50px; 
+    padding:50px; 
+    background-color:lightgreen; 
+}
 
-#mapmove {
-	color: white;
+.hideme
+{
+    opacity:0;
 }

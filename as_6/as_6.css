@@ -1,0 +1,13 @@
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 20vh;
+}
+
+.slideanimate {
+    visibility: hidden;
+}
+
+.slide {
+    visibility: visible;
+}
