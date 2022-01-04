@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Parallax vertical</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shadow.css">
+
+
+    <style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="innershadow1" style="background-color:black;min-height:25vh;position:relative;">
+        <img src="assets/01.jpeg" style="height: 200vh;-webkit-filter:grayscale(1);">
+        <img src="assets/climber.png" class="scrollable dropshadow1" data-left1=0 data-left2=0 data-width1=100
+            data-width2=50 data-bottom1=-10 data-bottom2=30 style="position:absolute;
+                    width:  200%; 
+                    bottom: 0%; 
+                    left:   0; 
+                    filter: blur(0px);
+                    z-index: 10">
+        <img id="testing" src="assets/fog.png" class="scrollable dropshadow1" data-top1=0 data-top2=50 data-left1=0
+            data-left2=0 style="position:absolute;
+                    width:  200%; 
+                    left:   25%; 
+                    top:    -10%; 
+                    filter: grayscale(.2) blur(0px) opacity(0.8);
+                    z-index: 10">
+    </div>
+
+    <div class="innershadow1" style="background-color:black;min-height:25vh;position:relative;">
+        <img src="assets/02.jpeg" style="height: 200vh;-webkit-filter:grayscale(1);">
+        <img src="assets/climber2.png" class="scrollable dropshadow1" data-left1=0 data-left2=20 data-width1=60
+            data-width2=60 data-bottom1=-10 data-bottom2=30 style="position:absolute;
+                    width:  200%; 
+                    bottom: 0%; 
+                    left:   0; 
+                    filter: blur(0px);
+                    z-index: 10">
+        <img id="testing" src="assets/fog.png" class="scrollable dropshadow1" data-top1=0 data-top2=50 data-left1=0
+            data-left2=0 style="position:absolute;
+                    width:  200%; 
+                    left:   25%; 
+                    top:    -10%; 
+                    filter: grayscale(.2) blur(0px) opacity(0.8);
+                    z-index: 10">
+    </div>
+
+    <div class="" style="background-color:black;height:100vh;"></div>
+
+    <div class="innershadow1 horizontal" style="height:200vh;">
+        <img src="assets/03.jpeg" class="scrollable dropshadow1" data-left1=100 data-left2=-100 style="position:fixed;
+                    top: 0px;
+                    height: 100vh;
+                    transform:translateX(100vw);
+                    filter: blur(1px);">
+        <img src="assets/climber3.png" class="scrollable dropshadow1" data-left1=150 data-left2=-120 style="position:fixed;
+                    height: 100vh;
+                    transform:translateX(100vw);
+                    bottom: -30%; 
+                    filter: grayscale(.2) blur(0px) opacity(0.8);">
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scrolled = $(window).scrollTop();
+                var winh = $(window).height();
+                $(".scrollable").each(function () {
+                    var parent_pos = $(this).parent().offset().top;
+                    var next_pos = $(this).parent().next().offset().top;
+                    var parent_height = $(this).parent().height();
+                    var parent_scrolled = scrolled - parent_pos + winh * 0.25;
+
+                    if ($(this).parent().hasClass("horizontal")) {
+                        if ($(this).attr("data-left1")) {
+                            $(this).css('transform', "translateX(" + (($(this).data('left2') -
+                                    $(this).data('left1')) * parent_scrolled /
+                                parent_height + $(this).data('left1')) + 'vw)');
+                        }
+
+                    } else {
+                        if (scrolled > parent_pos - winh * 0.25 && scrolled < next_pos - winh *
+                            0.25) {
+
+                            if ($(this).attr("data-left1")) {
+                                $(this).css('left', (($(this).data('left2') - $(this).data(
+                                    'left1')) * parent_scrolled / parent_height + $(
+                                    this).data('left1')) + '%    ');
+                            }
+                            if ($(this).attr("data-top1")) {
+                                $(this).css('top', (($(this).data('top2') - $(this).data(
+                                    'top1')) * parent_scrolled / parent_height + $(
+                                    this).data('top1')) + '%');
+                            }
+                            if ($(this).attr("data-width1")) {
+                                $(this).css('width', (($(this).data('width2') - $(this).data(
+                                        'width1')) * parent_scrolled / parent_height +
+                                    $(this).data('width1')) + '%');
+                            }
+                            if ($(this).attr("data-height1")) {
+                                $(this).css('height', (($(this).data('height2') - $(this).data(
+                                        'height1')) * parent_scrolled / parent_height +
+                                    $(this).data('height1')) + '%');
+                            }
+                            if ($(this).attr("data-bottom1")) {
+                                $(this).css('bottom', (($(this).data('bottom2') - $(this).data(
+                                        'bottom1')) * parent_scrolled / parent_height +
+                                    $(this).data('bottom1')) + '%');
+                            }
+                        }
+
+                    }
+
+                });
+                //                console.log($("#testing").offset().left/$(window).width());
+            });
+        });
+    </script>
+</body>
+
+</html>
